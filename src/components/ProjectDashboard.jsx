@@ -15,6 +15,7 @@ import expressSVG from '../assets/express-original.svg';
 import gitSVG from '../assets/git-original.svg';
 import dockerSVG from '../assets/docker-original.svg';
 import figmaSVG from '../assets/figma-original.svg';
+import '../App.css';
 
 const techStack = [
   { name: 'Java', src: javaSVG },
@@ -42,7 +43,7 @@ export default function ProjectDashboard() {
   return (
     <div className="w-full flex flex-col items-center">
       {/* Main Dashboard Card */}
-      <div className="relative w-full min-h-[260px] p-8 flex flex-col rounded-3xl border border-white/20 shadow-2xl overflow-hidden"
+      <div className="relative w-full min-h-[260px] p-8 flex flex-col rounded-3xl border border-white/20 shadow-2xl overflow-hidden floating"
         style={{
           background: 'rgba(24, 25, 43, 0.70)',
           WebkitBackdropFilter: 'blur(20px)',
@@ -112,7 +113,7 @@ export default function ProjectDashboard() {
         </div>
       </div>
       {/* Bottom Project Status Bar - now separate, glassmorphic */}
-      <div className="relative w-full mt-8 rounded-full border border-white/20 shadow-2xl flex-shrink-0 p-3 flex items-center justify-between overflow-hidden"
+      <div className="relative w-full mt-8 rounded-full border border-white/20 shadow-2xl flex-shrink-0 p-3 flex items-center justify-between overflow-hidden floating"
         style={{
           background: 'rgba(24, 25, 43, 0.70)',
           WebkitBackdropFilter: 'blur(20px)',
