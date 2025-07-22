@@ -1,1 +1,14 @@
-/* App.css is intentionally left empty. Add custom styles here if needed. */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+    box-shadow: 0 8px 40px 0 rgba(80,0,255,0.18), 0 1.5px 8px 0 rgba(0,0,0,0.22);
+  }
+  50% {
+    transform: translateY(-16px);
+    box-shadow: 0 16px 48px 0 rgba(80,0,255,0.22), 0 2px 12px 0 rgba(0,0,0,0.28);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
