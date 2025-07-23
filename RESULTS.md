@@ -1,0 +1,1 @@
+The hamburger menu icon in the header is now hidden on desktop and tablet screens. This was achieved by adding the `md:hidden` class to the icon's container in `src/components/Header.jsx`.
