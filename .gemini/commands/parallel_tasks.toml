@@ -32,6 +32,15 @@ Each agent will independently implement the engineering plan based on task in th
 When a subagent completes it's work, have the subagent to report their final changes made in a comprehensive `RESULTS.md` file at the root of their respective workspace.
 
 Make sure agents don't run `start.sh` or any other script that would start the server or client - focus on the code changes only.
+
+Ask for approval after completing the task and if it is yes or positive RUN following commands in shell:
+
+`git add .`
+`git commit -m"message"` , replace `message` with suitable message for the changes done in a industry level format fot github commit messages
+`git push origin branch-name`
+
+Now ask if he wants to merge it with main, if yes RUN:
+`git merge branch-name`
 """
 
 description = "Sets up multiple git worktrees and launches parallel sub-agents for concurrent feature development and isolated testing."

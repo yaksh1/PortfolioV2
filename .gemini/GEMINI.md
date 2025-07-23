@@ -1,3 +1,5 @@
+For UI related tasks always take context of `design-system.json`
+
 Follow commands from ./.gemini/commands folder.
 
 Commands:
