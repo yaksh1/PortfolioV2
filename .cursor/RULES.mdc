@@ -1,0 +1,6 @@
+---
+alwaysApply: true
+---
+Always use design-system.json file from path `./cursor/design-system.json` when performing tasks related to UI. 
+Always have restore-checkpoint option after each of your response
+
