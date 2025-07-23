@@ -1,8 +1,7 @@
-# Navbar Hover Effect
+# Smooth Scrolling for Navigation
 
-Added an animated underline and glow hover effect to the navbar links.
+Implemented smooth scrolling for the navigation links. When a user clicks a link, the page will now smoothly scroll to the corresponding section instead of jumping directly to it.
 
 ## Changes
 
-- Modified `src/components/Header.jsx` to add a sliding underline effect on hover using Tailwind CSS pseudo-elements and transitions.
-- Added a glow effect on hover using `drop-shadow`.
+- Modified `src/index.css` to add `scroll-behavior: smooth;` to the `html` element.
