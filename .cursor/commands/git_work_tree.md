@@ -20,6 +20,7 @@ This enables to use a new subagent that use the Task tool to execute in each git
 
 This enables to concurrently build the feature in parallel so we can test and validate each subagent's changes in isolation then pick the best changes.
 
+** IMPORTANT: THEN do cd trees/<branch-name>. DO CHANGES IN THIS FOLDER ONLY!!!!!!
 The first agent will run in trees/<branch-name>/
 
 
