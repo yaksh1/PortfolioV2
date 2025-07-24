@@ -1,5 +1,8 @@
-import React from 'react'
-import PortfolioCard from './PortfolioCard'
+import React from 'react';
+import TiltedCard from '../blocks/Components/TiltedCard/TiltedCard';
+import ProjectDetails from './ProjectDetails';
+import '../blocks/Components/TiltedCard/TiltedCard.css';
+import './ProjectDetails.css';
 
 const Portfolio = ({ projects }) => (
   <section
@@ -14,9 +17,14 @@ const Portfolio = ({ projects }) => (
         Showcasing my best <span className='text-yellow-400'>projects</span>{' '}
         and <span className='text-green-400'>creations</span>.
       </p>
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12'>
         {projects.map((project, index) => (
-          <PortfolioCard key={index} project={project} />
+          <TiltedCard
+            key={index}
+            imageSrc={project.imageUrl}
+            overlayContent={<ProjectDetails project={project} />}
+            title={project.title}
+          />
         ))}
       </div>
       <div className='flex justify-center mt-12'>
@@ -29,6 +37,6 @@ const Portfolio = ({ projects }) => (
       </div>
     </div>
   </section>
-)
+);
 
-export default Portfolio 
+export default Portfolio; 
