@@ -17,10 +17,11 @@ After that, for each branch, we should go into the folder (with absolute path) a
 
 ## Step 2: Start Parallel sub agents
 
-This enables to use N new subagents that use the Task tool to execute in each git worktree parallel.
+This enables to use N new subagents that use the Task tool to execute in each git work tree parallel.
 
 This enables to concurrently build the feature in parallel so we can test and validate each subagent's changes in isolation then pick the best changes.
 
+** IMPORTANT: THEN do cd trees/<branch-name>. DO CHANGES IN THIS FOLDER ONLY!!!!!!
 The first agent will run in trees/<branch-name-1>/
 The second agent will run in trees/<branch-name-2>/
 The last agent will run in trees/<branch-name-n>/
@@ -33,14 +34,8 @@ When a subagent completes it's work, have the subagent to report their final cha
 
 Make sure agents don't run `start.sh` or any other script that would start the server or client - focus on the code changes only.
 
-Ask for approval after completing the task and if it is yes or positive RUN following commands in shell:
+Ask "Do you want to commit this or revise a change?" after completing the task and if he answers commit the code then stop.
 
-`git add .`
-`git commit -m"message"` , replace `message` with suitable message for the changes done in a industry level format fot github commit messages
-`git push origin branch-name`
-
-Now ask if he wants to merge it with main, if yes RUN:
-`git merge branch-name`
 """
 
 description = "Sets up multiple git worktrees and launches parallel sub-agents for concurrent feature development and isolated testing."
