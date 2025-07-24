@@ -16,7 +16,7 @@ const portfolioProjects = [
       'Led the redesign of a large-scale e-commerce platform, focusing on user experience and conversion optimization.',
     technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
     imageUrl:
-      'https://placehold.co/600x400/333333/FFFFFF?text=E-commerce+Redesign',
+      'https://repository-images.githubusercontent.com/456963513/82528385-a73f-488f-9003-513321283a6b',
     link: '#'
   },
   {
