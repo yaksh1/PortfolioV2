@@ -26,6 +26,14 @@ const Header = () => {
         <a href='#portfolio' className='relative text-white transition-colors duration-300 before:absolute before:left-0 before:-bottom-2 before:w-full before:h-0.5 before:bg-purple-400 before:transition-transform before:duration-300 before:scale-x-0 hover:before:scale-x-100 hover:drop-shadow-[0_0_5px_rgba(168,139,250,0.8)]'>Portfolio</a>
         <a href='#contact' className='relative text-white transition-colors duration-300 before:absolute before:left-0 before:-bottom-2 before:w-full before:h-0.5 before:bg-purple-400 before:transition-transform before:duration-300 before:scale-x-0 hover:before:scale-x-100 hover:drop-shadow-[0_0_5px_rgba(168,139,250,0.8)]'>Contact</a>
       </nav>
+      <div className='hidden md:flex items-center space-x-4'>
+        <a
+          href='https://mail.google.com/mail/?view=cm&fs=1&to=yakksh.dev@gmail.com'
+          className='px-6 py-2 bg-yellow-400 text-black rounded-full font-bold text-base hover:bg-yellow-500 transition duration-300 shadow-md'
+        >
+          Get in Touch
+        </a>
+      </div>
       <div className='md:hidden flex items-center'>
         <button onClick={toggleMenu} className='w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white text-sm z-30'>
           {isMenuOpen ? <X className='h-5 w-5' /> : <Menu className='h-5 w-5' />}
