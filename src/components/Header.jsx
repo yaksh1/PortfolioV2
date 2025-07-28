@@ -1,6 +1,61 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+
+const ShareButton = ({ links, children, className = '', ...props }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <button
+        className={`relative min-w-40 rounded-3xl bg-yellow-400 text-black font-bold text-base px-6 py-2 shadow-md border border-black/10 transition-all duration-300 flex items-center justify-center ${isHovered ? 'opacity-0' : 'opacity-100'} ${className}`}
+        {...props}
+      >
+        <span className="flex items-center justify-center w-full h-full gap-2">{children}</span>
+      </button>
+      <div className="absolute left-0 top-0 flex h-10">
+        {links.map((link, index) => {
+          const Icon = link.icon;
+          return (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              type="button"
+              key={index}
+              className={`h-10 w-10 flex items-center justify-center bg-black text-white transition-all duration-300 ${
+                index === 0 ? 'rounded-l-3xl' : ''
+              } ${
+                index === links.length - 1 ? 'rounded-r-3xl' : ''
+              } border-r border-white/10 last:border-r-0 hover:bg-gray-900 ${
+                isHovered
+                  ? 'translate-x-0 opacity-100'
+                  : '-translate-x-full opacity-0'
+              } ${
+                index === 0
+                  ? 'transition-all duration-200'
+                  : index === 1
+                  ? 'delay-[50ms] transition-all duration-200'
+                  : index === 2
+                  ? 'transition-all delay-100 duration-200'
+                  : index === 3
+                  ? 'transition-all delay-150 duration-200'
+                  : ''
+              }`}
+              style={{ zIndex: 10 - index }}
+            >
+              <Icon className="size-4" />
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,12 +82,28 @@ const Header = () => {
         <a href='#contact' className='relative text-white transition-colors duration-300 before:absolute before:left-0 before:-bottom-2 before:w-full before:h-0.5 before:bg-purple-400 before:transition-transform before:duration-300 before:scale-x-0 hover:before:scale-x-100 hover:drop-shadow-[0_0_5px_rgba(168,139,250,0.8)]'>Contact</a>
       </nav>
       <div className='hidden md:flex items-center space-x-4'>
-        <a
-          href='https://mail.google.com/mail/?view=cm&fs=1&to=yakksh.dev@gmail.com'
-          className='px-6 py-2 bg-yellow-400 text-black rounded-full font-bold text-base hover:bg-yellow-500 transition duration-300 shadow-md'
+        <ShareButton
+          links={[
+            {
+              icon: FaEnvelope,
+              href: 'https://mail.google.com/mail/?view=cm&fs=1&to=yakksh.dev@gmail.com',
+            },
+            {
+              icon: FaGithub,
+              href: 'https://github.com/yaksh1',
+            },
+            {
+              icon: FaLinkedin,
+              href: 'https://linkedin.com/in/yakshgandhi',
+            },
+            {
+              icon: FaWhatsapp,
+              href: 'https://wa.me/919999999999',
+            },
+          ]}
         >
           Get in Touch
-        </a>
+        </ShareButton>
       </div>
       <div className='md:hidden flex items-center'>
         <button onClick={toggleMenu} className='w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white text-sm z-30'>

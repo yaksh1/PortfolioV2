@@ -22,7 +22,7 @@ const Contact = () => (
       <div className='flex justify-center space-x-4 mt-2'>
         <a href='https://github.com/yaksh1' className='hover:text-white transition duration-300' target='_blank' rel='noopener noreferrer'>GitHub</a>
         <a href='https://linkedin.com/in/yakshgandhi' className='hover:text-white transition duration-300' target='_blank' rel='noopener noreferrer'>LinkedIn</a>
-        <span>@yakksh.dev</span>
+        <a href='https://instagram.com/yakksh.dev' className='hover:text-white transition duration-300' target='_blank' rel='noopener noreferrer'>Instagram</a>
       </div>
     </div>
   </section>
