@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
+
 const ShareButton = ({ links, children, className = '', ...props }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -72,7 +73,7 @@ const Header = () => {
 
   return (
     <header className='flex justify-between items-center p-6 md:p-8 lg:p-10 z-20 relative'>
-      <div className='text-3xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent tracking-widest font-mono drop-shadow-[0_2px_8px_rgba(168,139,250,0.4)]'>
+      <div className='text-3xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent tracking-widest font-mono drop-shadow-[0_2px_8px_rgba(168,139,250,0.4)]' style={{ fontFamily: 'Bruno Ace, cursive' }}>
         //YG
       </div>
       <nav className='hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-6 text-sm text-gray-200 font-medium'>
