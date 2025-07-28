@@ -1,5 +1,6 @@
 import React from 'react'
 import ProfileCard from './ProfileCard'
+import profilePic from '../assets/profile.jpeg';
 
 const About = () => (
   <section
@@ -28,13 +29,11 @@ const About = () => (
       </div>
       <div className='md:w-1/2 flex justify-center'>
         <ProfileCard
-          avatarUrl='https://placehold.co/128x128/2b2b2b/FFFFFF?text=YG'
+          avatarUrl={profilePic}
           name='Yaksh Gandhi'
           title='Software Engineer'
-          handle='@yakksh.dev'
           status='Open to opportunities'
-          contactText='Contact Me'
-          showUserInfo={true}
+          // showUserInfo={true}
           enableTilt={true}
           behindGradient='linear-gradient(135deg, #a78bfa 0%, #f472b6 100%)'
           innerGradient='radial-gradient(circle at 60% 40%, #fbbf24 0%, #f472b6 100%)'
