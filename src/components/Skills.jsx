@@ -547,8 +547,8 @@ const Skills = ({
     <section id="skills" className="py-16 md:py-24 lg:py-32 px-4 md:px-10 lg:px-20 bg-[#1a1a1a]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-sm font-semibold text-purple-400 uppercase tracking-wider text-center mb-8">
-          My Skills
-        </h2>
+        My Skills
+      </h2>
         <>
           <style>
             {`
@@ -668,7 +668,7 @@ const Skills = ({
 
                 return (
                   <div
-                    key={index}
+            key={index}
                     className={baseClassName}
                     style={cardStyle}
                   >
@@ -679,15 +679,15 @@ const Skills = ({
                           <img src={skill.icon} alt={skill.name} className="w-10 h-10 md:w-12 md:h-12 mb-2 drop-shadow-[0_2px_8px_rgba(80,180,255,0.15)]" />
                           <span className="text-gray-200 text-sm font-medium text-center">{skill.name}</span>
                         </div>
-                      ))}
-                    </div>
+        ))}
+      </div>
                   </div>
                 );
               })}
           </BentoCardGrid>
         </>
-      </div>
-    </section>
+    </div>
+  </section>
   );
 };
 

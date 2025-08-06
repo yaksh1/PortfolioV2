@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import ProjectDashboard from './ProjectDashboard'
+
 
 const headingLines = [
   <>Hi, I'm <span className="text-yellow-400">Yaksh Gandhi</span></>,
@@ -11,9 +11,9 @@ const headingLines = [
 const Hero = () => {
   return (
     <section className="relative flex flex-col md:flex-row items-start justify-center min-h-screen px-0 md:px-0 py-24 bg-[#1a1a1a] overflow-hidden">
-      <div className="relative z-10 flex flex-col md:flex-row items-start justify-center">
-        <div className="max-w-3xl flex flex-col items-start space-y-4 pl-4 md:pl-12 flex-1 min-w-0">
-          <h1 className="text-5xl md:text-5xl font-extrabold text-white leading-tight text-left tracking-wide" style={{ fontFamily: 'DM Serif Text, serif', letterSpacing: '0.04em' }}>
+            <div className="relative z-10 flex flex-col md:flex-row items-start justify-start w-full">
+        <div className="w-full flex flex-col items-start justify-center text-left space-y-4 px-4 md:pl-12">
+                    <h1 className="text-5xl md:text-5xl font-extrabold text-white leading-tight text-left tracking-wide" style={{ fontFamily: 'DM Serif Text, serif', letterSpacing: '0.04em' }}>
             {headingLines.map((line, idx) => (
               <motion.div
                 key={idx}
@@ -26,7 +26,7 @@ const Hero = () => {
               </motion.div>
             ))}
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 font-sans text-left max-w-xl">
+                    <p className="text-lg md:text-xl text-gray-300 font-sans text-left max-w-xl">
             Crafting engaging and immersive digital experiences with a passion for innovation and design.
           </p>
           <div className="mt-8 flex flex-row items-center gap-6">
@@ -45,11 +45,7 @@ const Hero = () => {
             </span>
           </div>
         </div>
-        <div className="flex-1 flex justify-center items-start w-full md:w-auto mt-[-100px] md:mt-[-100px] max-w-2xl overflow-hidden min-w-0 mr-10">
-          <div className="scale-90 flex items-center justify-center">
-            <ProjectDashboard />
-          </div>
-        </div>
+
       </div>
     </section>
   )

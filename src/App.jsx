@@ -7,58 +7,64 @@ import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import AuroraCursor from './components/AuroraCursor'
+import promoImg from './assets/promo.png'
+import trainImg from './assets/train2.png'
+import feedbackImg from './assets/feedback.jpg'
+import aiImg from './assets/ai_agent.jpg'
+import reclaimifyImg from './assets/reclaimify.png'
+import githubImg from './assets/github_dashboard.png'
 
 // Dummy data for portfolio projects
 const portfolioProjects = [
   {
-    title: 'E-commerce Platform Redesign',
+    title: 'Research Assistant Extension',
     description:
-      'Led the redesign of a large-scale e-commerce platform, focusing on user experience and conversion optimization.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+      'Created a chrome extension to summarize selected content using AI and save them with citations.',
+    technologies: ['Javascript', 'HTML', 'CSS','Java','Springboot','Gemini API'],
+    imageUrl: promoImg,
+    link: 'https://yaksh1.github.io/Research-Assistant-Extension/'
+  },
+  {
+    title: 'Train ticket booking microservice',
+    description:
+      'A robust, scalable train ticket booking system built using microservices architecture. This system allows users to book train tickets, manage train schedules, and handle user accounts through a set of interconnected microservices.',
+    technologies: ['Java', 'Springboot','docker','MongoDB','Eureka','Git'],
+    imageUrl: trainImg,
+    link: 'https://github.com/yaksh1/train-ticket-config-server'
+  },
+  {
+    title: 'Faculty Feedback',
+    description:
+      'A web application for faculty feedback using Spring Boot, MongoDB and MySQL',
+    technologies: ['Springboot', 'MongoDB', 'MySQL','JWT','Perspective API','BCrypt'],
     imageUrl:
-      'https://repository-images.githubusercontent.com/456963513/82528385-a73f-488f-9003-513321283a6b',
-    link: '#'
+      feedbackImg,
+    link: 'https://github.com/yaksh1/faculty-feedback'
   },
   {
-    title: 'Mobile Game Development',
+    title: 'AI Agent - Researcha and email drafting',
     description:
-      'Developed a cross-platform mobile game with engaging mechanics and a vibrant art style.',
-    technologies: ['React Native', 'Firebase', 'Unity (concept)'],
-    imageUrl: 'https://placehold.co/600x400/444444/FFFFFF?text=Mobile+Game',
-    link: '#'
+      'A multi-agent system that automates the process of researching a topic and then drafting an email based on the findings.',
+    technologies: ['Python', 'PydanticAI', 'Google Search API', 'Gmail API'],
+    imageUrl: aiImg,
+    link: 'https://github.com/yaksh1/Ai-agent'
   },
   {
-    title: 'Data Visualization Dashboard',
+    title: 'Reclaimify',
     description:
-      'Built an interactive dashboard to visualize complex datasets for business intelligence.',
-    technologies: ['D3.js', 'React', 'Python (Flask)'],
-    imageUrl:
-      'https://placehold.co/600x400/555555/FFFFFF?text=Data+Viz+Dashboard',
-    link: '#'
+      'A Flutter-based Lost and Found app designed to streamline the process of returning lost items to their rightful owners. This repository contains the source code and essential information for developers looking to explore or contribute to the project.',
+    technologies: ['Flutter', 'Bloc', 'Firebase', 'Dart', 'Git'],
+    imageUrl: reclaimifyImg,
+    link: 'https://github.com/yaksh1/reclaimify'
   },
   {
-    title: 'AI Chatbot Integration',
+    title: 'Github - Dashboard',
     description:
-      'Integrated a custom AI chatbot into a customer service portal, improving response times and user satisfaction.',
-    technologies: ['Python', 'TensorFlow', 'Flask', 'React'],
-    imageUrl: 'https://placehold.co/600x400/666666/FFFFFF?text=AI+Chatbot',
-    link: '#'
-  },
-  {
-    title: 'Personal Blog & CMS',
-    description:
-      'Designed and developed a personal blog with a custom content management system.',
-    technologies: ['Next.js', 'GraphQL', 'Strapi', 'Tailwind CSS'],
-    imageUrl: 'https://placehold.co/600x400/777777/FFFFFF?text=Personal+Blog',
-    link: '#'
-  },
-  {
-    title: 'Smart Home Automation App',
-    description:
-      'Created a mobile application for controlling smart home devices and managing schedules.',
-    technologies: ['Flutter', 'AWS IoT', 'Python'],
-    imageUrl: 'https://placehold.co/600x400/888888/FFFFFF?text=Smart+Home+App',
-    link: '#'
+      'This project is a web-based dashboard that provides a high-level overview of any public GitHub repository. It is designed to help developers quickly assess the health and activity of a project, identify trends, and find opportunities to contribute.',
+    technologies: ['React','Vite','Tailwind CSS','Git','Github API','Chart.js'],
+    imageUrl: githubImg
+,
+    link: 'https://github.com/yaksh1/dashboard-github'
   }
 ]
 

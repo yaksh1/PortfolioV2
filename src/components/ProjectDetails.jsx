@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaGithub } from 'react-icons/fa';
 
 const ProjectDetails = ({ project }) => {
   if (!project) {
@@ -16,6 +17,10 @@ const ProjectDetails = ({ project }) => {
             </span>
           ))}
       </div>
+      <a href={project.link} target="_blank" rel="noopener noreferrer" className="github-link">
+        <FaGithub className="github-icon" />
+        View on GitHub
+      </a>
     </div>
   );
 };

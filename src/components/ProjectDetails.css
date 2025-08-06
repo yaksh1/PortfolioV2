@@ -29,3 +29,17 @@
   font-weight: 500;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.github-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}

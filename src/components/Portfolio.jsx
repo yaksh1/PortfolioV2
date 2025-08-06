@@ -17,26 +17,31 @@ const Portfolio = ({ projects }) => (
         Showcasing my best <span className='text-yellow-400'>projects</span>{' '}
         and <span className='text-green-400'>creations</span>.
       </p>
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12'>
+      <div className='flex flex-col gap-16'>
         {projects.map((project, index) => (
-          <TiltedCard
+          <div
             key={index}
-            imageSrc={project.imageUrl}
-            overlayContent={<ProjectDetails project={project} />}
-            title={project.title}
-          />
+            className={`flex flex-col md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''} items-center md:items-stretch gap-8`}
+          >
+            <div className='flex-shrink-0 flex justify-center items-center w-full md:w-1/2'>
+              <TiltedCard
+                imageSrc={project.imageUrl}
+                title={project.title}
+                overlayContent={null}
+                containerHeight='300px'
+                containerWidth='100%'
+                imageHeight='300px'
+                imageWidth='100%'
+              />
+            </div>
+            <div className='w-full md:w-1/2 flex items-center'>
+              <ProjectDetails project={project} />
+            </div>
+          </div>
         ))}
-      </div>
-      <div className='flex justify-center mt-12'>
-        <a
-          href='#'
-          className='px-6 py-3 border border-gray-600 text-gray-400 rounded-full font-semibold hover:text-white hover:border-white transition duration-300'
-        >
-          View All Projects
-        </a>
       </div>
     </div>
   </section>
 );
 
-export default Portfolio; 
+export default Portfolio;
