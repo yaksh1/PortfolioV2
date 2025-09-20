@@ -6,7 +6,7 @@ import Skills from './components/Skills'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import AuroraCursor from './components/AuroraCursor'
+
 import promoImg from './assets/promo.png'
 import trainImg from './assets/train2.png'
 import feedbackImg from './assets/feedback.jpg'
@@ -69,21 +69,9 @@ const portfolioProjects = [
 ]
 
 const App = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-
-  useEffect(() => {
-    const handleMouseMove = event => {
-      setMousePosition({ x: event.clientX, y: event.clientY })
-    }
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-    }
-  }, [])
 
   return (
     <div className='min-h-screen bg-[#1a1a1a] text-white font-inter relative overflow-hidden'>
-      <AuroraCursor mouseX={mousePosition.x} mouseY={mousePosition.y} />
       <Header />
       <Hero />
       <About />

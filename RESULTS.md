@@ -1,51 +1,24 @@
-# Hero Section Update
+# Skill Section Update
 
-I have updated the Hero section to include a showcase for the Kortex Chrome extension.
+I have updated the Skills section with a new layout and content.
 
 ## Changes Made:
 
-1.  **Modified `src/components/Hero.jsx`:**
-    *   Changed the layout to a two-column grid on medium screens and up.
-    *   The left column contains the existing heading and introduction text.
-    *   The right column now features a new card that showcases the Kortex Chrome extension.
-    *   The card includes:
-        *   An image of the extension.
-        *   A title: "Proudly Featured by Google".
-        *   A description of the extension.
-        *   "As Seen On" badges for the Chrome Web Store and a XDA Developers blog.
-        *   Call-to-action buttons: "Add to Chrome" and "Read the Blog".
+1.  **Modified `src/components/Skills.jsx`:**
+    *   Replaced the entire content of the component with a new layout based on the provided markdown.
+    *   The new layout is a grid of cards, each containing a category of skills.
+    *   The styling of the cards, titles, icons, and tags has been updated to match the website's dark theme, using purples and grays.
+    *   Removed the bento grid layout to make all skill cards of equal size.
+    *   Updated the grid to display a maximum of two columns on medium screens and larger.
+    *   Decreased the overall width of the skills section for a more compact layout.
+    *   Added a hover animation to each skill card, causing it to scale up smoothly on hover.
+    *   Added a border glow effect to the skill cards on hover for a more dynamic look.
 
-2.  **File Conversions:**
-    *   The provided HTML for the showcase card was converted to JSX to be used in the React component.
-    *   This included changing `class` to `className` and updating SVG attributes like `fill-rule` to `fillRule`.
+2.  **Modified `index.html`:**
+    *   Added a link to Google's Material Icons stylesheet to support the icons used in the new skills section.
 
-## Link Updates:
+3.  **File Deletion:**
+    *   Removed the temporary `skill.md` file as it is no longer needed.
 
-*   Updated the "Add to Chrome" button to link to the official Chrome Web Store page for Kortex.
-*   Updated the "Read the Blog" button to link to the XDA Developers article about Kortex.
-*   Updated the blog name from "TechCrunch Blog" to "XDA Developers".
-
-## Styling Updates:
-
-*   The "Add to Chrome" button has been restyled to match the website's theme. It now features a purple-to-yellow gradient background.
-*   **Update:** The "Add to Chrome" button style has been updated again to match the "Get in touch" button, featuring a solid yellow background with black text for a consistent look and feel.
-
-## Image Fix:
-
-*   Fixed the broken image for the Kortex showcase by replacing the invalid link with a local image (`promo.png`) and importing it correctly within the component.
-
-## Layout Adjustments:
-
-*   Adjusted the vertical alignment of the hero section content to move it higher on the page. The content is now aligned to the top of its container rather than being vertically centered.
-*   **Update:** Further adjusted the vertical alignment by reducing the top padding to move the content higher on the page.
-*   **Update 2:** Reduced the top padding even further for a higher placement of the content.
-
-## Animation:
-
-*   Added a floating animation to the Kortex showcase card to make it more dynamic and visually appealing.
-*   **Update:** The floating animation has been updated to be more 'cloud-like', with a slower and more gentle movement.
-*   **Update 2:** Increased the intensity of the floating animation to make it more noticeable for debugging purposes.
-
-## UI Improvement:
-
-*   Made the "VIEW PROJECTS" text clickable by wrapping both the icon and the text in a single `<a>` tag, improving user experience and accessibility.
+4.  **Modified `src/App.jsx`:**
+    *   Removed the `AuroraCursor` component and its related code to disable the purple mouse aura effect.
